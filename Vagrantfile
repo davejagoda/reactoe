@@ -11,6 +11,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.name = HOSTNAME
   end
   config.vm.network 'forwarded_port', guest: 3000, host: 3000
+  config.vm.provision 'file', source: '~/.gitconfig',
+                      destination: '.gitconfig'
+  config.vm.provision 'file', source: '~/.gitignore_global',
+                      destination: '.gitignore_global'
   config.vm.provision 'shell', inline: 'apt-get update'
   config.vm.provision 'shell', inline: 'apt-get install -y npm'
 end
