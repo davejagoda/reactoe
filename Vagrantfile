@@ -16,5 +16,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision 'file', source: '~/.gitignore_global',
                       destination: '.gitignore_global'
   config.vm.provision 'shell', inline: 'apt-get update'
-  config.vm.provision 'shell', inline: 'apt-get install -y npm'
+  # to make this error message go away:
+  # default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+  # set DEBIAN_FRONTEND=noninteractive
+  config.vm.provision 'shell',
+                      inline: 'DEBIAN_FRONTEND=noninteractive apt-get install -y npm'
 end

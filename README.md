@@ -22,6 +22,7 @@ vagrant ssh
 
 ```
 cd /vagrant/
+npm install
 npm start
 ```
 
