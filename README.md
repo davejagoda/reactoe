@@ -1,7 +1,9 @@
 reactoe
 =======
 
-Tic Tac Toe in React
+React meets tic-tac-toe
+
+[Tutorial](https://reactjs.org/tutorial/tutorial.html)
 
 Play online
 -----------
