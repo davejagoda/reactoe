@@ -8,6 +8,10 @@ React meets tic-tac-toe
 Play online
 -----------
 
+```
+npm run deploy
+```
+
 https://davejagoda.github.io/reactoe/
 
 Play in vagrant
